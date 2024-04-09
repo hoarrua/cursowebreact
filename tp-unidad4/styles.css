@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+html{
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffff;
+}
+
+
+
+.w-80 {
+  width: 80% !important;
+}
+
+
+.div-1{
+  background-color: #ABBAEA;
+  height: 30px;
+  width:100%;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+
+.input-text {
+  font-size: 13px;
+  width: 250px;
+  height: 30px !important;
+  padding-left: 10px;
+}
+
+
+.div-2{
+		
+		padding-left: 10px;
+}	
+
+
+
+
+li {
+  list-style: none;
+  margin-left: 0px;
+  
+}
+
+
+ul {
+  margin: 0px;
+   margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  list-style: none;
+  
+}
+
+h1{
+		color: #ABBAEA;
+}
+
+img{
+	 padding-left: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio01</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column; /* Dirección de los elementos flex */
+    justify-content: flex-end; /* Alineación vertical hacia abajo */
+    align-items: flex-end; /* Alineación horizontal a la derecha */
+    height: 100vh;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+	border: 2px solid black;
+  }
+  .row {
+    display: flex;
+    margin-bottom: 0px; /* Espacio entre cada fila */
+  }
+ 
+  
+  .column1 {
+    background-color: #ff1a00;
+	
+  }
+  
+  
+  .column2 { 
+    padding: 20px;
+    background-color: #412CB4;
+	
+  }
+  
+  .column3 {
+    padding: 20px;
+    background-color: #399767;
+	
+  }
+  
+  .column1, .column2, .column3{
+		flex: 1; /* Toma igual cantidad de espacio dentro de la fila */
+		height: 200px;
+		width: 200px;
+		box-sizing: border-box;
+		margin-left: 10px; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+  }
+  
+  
+  p
+  {
+		color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column1">
+		<p>1</p>			
+      </div>
+    </div>
+    <div class="row">
+      <div class="column2">
+        <p>2</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column3">
+        <p>3</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

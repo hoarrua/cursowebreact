@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio03</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0; /* Eliminar margen predeterminado */
+			
+        }
+
+        .container {
+            display: flex;
+            flex-content: space-between; 
+			height:100%;
+			width: 100%;
+			border: 2px solid black;
+			align-items: stretch;
+        }
+		
+
+
+        .column1 {  
+			background-color: #ff1a00;
+			margin-right: 280px;		
+        }
+		
+		.column2 { 
+			 background-color: #412CB4;
+			margin-right: 280px;
+        }
+		
+		.column3 { 
+			background-color: #399767;
+        }
+		
+		.column1, .column2, .column3{
+			height: 200px;
+			width: 240px;
+			justify-content: center;
+			align-items: center;
+		
+		}
+		
+		
+		
+		p
+		  {
+				color: #FFFFFF;
+				text-align: center;
+				margin: 0;
+				line-height: 200px;		
+		  }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column1"><p>1</p></div>
+    <div class="column2"><p>2</p></div>
+    <div class="column3"><p>3</p></div>
+</div>
+
+</body>
+</html>

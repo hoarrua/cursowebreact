@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+		@charset "utf-8";
+		/* CSS Document */
+
+		body {
+			color: #000;
+			background: #332F29;
+			font-size:100%;
+		}	
+
+		#contenedor {
+			width: 800px;
+			background: #8FA68E;
+			margin-right:auto;
+			margin-left:auto;
+			overflow: hidden;
+		}
+		nav {
+			background: #CC3910;
+			float: left;
+			width: 160px;
+		}
+		ul {
+			list-style-type:none;
+		}
+		a {
+			color:#F1F2C0;
+			text-decoration: none;
+		}
+		section {
+			background: #F1F2C0;
+			float: left;
+			margin: 0 0 0 25px;
+			width: 400px;
+		}
+		aside {
+			background: #CCC59E;
+			float: right;
+			width: 190px;
+		}
+		
+		@media (max-width: 800px) {
+		  #contenedor {
+			width: 100%;
+			flex-direction: column;
+		  }
+
+		  nav,
+		  section,
+		  aside {
+			width: 100%;
+			float: none;
+			margin:0px;
+			padding:0px;
+			margin-right: 0; 
+			
+		  }
+		}
+  
+  </style>
+</head>
+<body>
+  <div id="contenedor">
+    <h1>Optimizando con CSS </h1>
+    <nav>
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h2>Ejemplo de Media Queries </h2>
+      <p> El layout de esta pagina se adapta segun el dispositivo que utilices, puedes usar tu propio smartphone o un
+        emulador</p>
+      </section>
+    <aside>
+      <h2> Contenido adicional </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+      </aside>
+  
+  </div>
+  
+</body>
+</html>

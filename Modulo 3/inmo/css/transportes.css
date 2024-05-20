@@ -35,7 +35,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100%; /* Para que los elementos dentro del nav ocupen el 100% de su altura */
+    height: 100%; 
 }
 
 nav ul li {
@@ -45,38 +45,38 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-	padding: 5px 5px; /* Ajusta el padding para mover el texto hacia arriba */
+	padding: 5px 5px; 
     display: block;
     text-align: center;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 16px;
     color: #FFF;
     font-weight: 700;
-    height: 100%; /* Asegúrate de que los enlaces ocupen toda la altura del li */
-    display: flex; /* Usa flexbox para centrar verticalmente el texto */
+    height: 100%; 
+    display: flex;
     align-items: center;
     justify-content: center;
-	 box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+	 box-sizing: border-box; 
 }
 
 nav ul li a.activo {
     background-color: #DA610C;
-    padding: 5px 5px; /* Mantén el mismo padding que los enlaces no activos */
-    height: 100%; /* Asegúrate de que los enlaces ocupen toda la altura del li */
+    padding: 5px 5px;
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+    box-sizing: border-box; 
 }
 
 nav ul li a:hover {
     background-color: rgba(0,0,0,0.3);
-	padding: 5px 5px; /* Mantén el mismo padding que los enlaces no activos */
-    height: 100%; /* Asegúrate de que los enlaces ocupen toda la altura del li */
+	padding: 5px 5px; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+    box-sizing: border-box;
 }
 
 
@@ -146,76 +146,32 @@ h2{
 	font-size: 14px;
 }
 
-/**
-.personas{
-	display: flex;
-	flex-direction: column; 
-	justify-content: space-between;
-}
 
-.persona{
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 18%;
-	text-align: center;
-	padding: 13px;
-	box-sizing: border-box;	
-}
-
-.persona img{
-	
-	max-width: 90%;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-**/
 .personas {
     display: flex;
-    flex-direction: column; /* Asegura que cada persona esté en una fila diferente */
-    gap: 20px; /* Añade espacio entre las tarjetas de personas */
+    flex-direction: column; 
+    gap: 20px; 
 }
 
 .persona {
     display: flex;
-    align-items: flex-start; /* Alinea los items al inicio verticalmente */
-    gap: 20px; /* Espacio entre la imagen y la información */
+    align-items: flex-start;
+    gap: 20px; 
 }
 
 .persona img {
-    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    width: 100px; 
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .info h5, .info h6, .info p {
-    margin: 5px 0; /* Añade margen entre los elementos de la información */
+    margin: 5px 0; 
 }
 
 
 
 
 
-
-/**
-.propiedades{
-	display: flex;
-	flex-direction: column; 
-	justify-content: space-between;
-}
-
-.propiedad{
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 18%;
-	text-align: center;
-	padding: 13px;
-	box-sizing: border-box;	
-}
-
-.propiedad img{
-	
-	max-width: 90%;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-**/
 
 .propiedades {
     display: grid;
@@ -226,14 +182,14 @@ h2{
 .propiedad {
     background-color: #f9f9f9; /* Fondo para que se distinga cada propiedad */
     padding: 10px;
-    border: 1px solid #ddd; /* Borde para cada propiedad */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centrar el texto */
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    text-align: center; 
 }
 
 .propiedad img {
-    width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
-    height: auto; /* Mantener proporción de la imagen */
+    width: 50%; 
+    height: auto; 
 }
 
 .propiedad h5 {

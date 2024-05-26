@@ -26,7 +26,7 @@ header h1{
 nav {
     background-color: #EA7F57;
     margin-bottom: 0px;
-    height: 70px; /* Ajusta este valor según lo que necesites */
+    height: 70px; 
 	align-items: center;
 }
 
@@ -176,24 +176,31 @@ h2{
 .propiedades {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espacio entre las columnas */
+    gap: 5px; /* Espacio entre las columnas */
 }
 
 .propiedad {
-    background-color: #f9f9f9; /* Fondo para que se distinga cada propiedad */
-    padding: 10px;
-    border: 1px solid #ddd; 
+    background-color: #f9f9f9;
+    padding: 5px;
+     flex: 1;
     border-radius: 5px; 
     text-align: center; 
+	padding: 5px;
 }
 
 .propiedad img {
-    width: 50%; 
+    width: 60%; 
     height: auto; 
+	border: 1px solid #ddd;
+	padding: 0.3em;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	margin-right: 2%;
 }
 
 .propiedad h5 {
 	color: #DA380C; 
+	
 }
 
 
@@ -204,3 +211,93 @@ h2{
             padding: 10px;
             color: white;
         }
+
+
+.buscador {
+    background-color: #2e64a1; 
+    padding: 10px;
+    border-radius: 5px;  
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-size: 12px;
+	height: 310px;
+	width: 320px;
+
+	
+}
+
+
+
+
+.buscador h2{
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center; 
+	
+}
+
+
+label {
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0!important;
+}
+
+
+.buscador .row {
+        margin-bottom: 5px;
+		margin-left: 5px;
+	
+    }
+
+
+
+.buscador .col {
+       padding-left:5px;
+	
+    }
+
+
+	
+	
+.buscador .form-check-inline {
+	margin-right: 10px;
+}
+
+.form-check-label .mr-2{
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+
+.buscador .btn-custom {
+    background-color: #4CAF50; 
+    border-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px; 
+    font-size: 16px; 
+	width: 250px; 
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+.buscador .btn-custom:hover {
+    background-color: #45a049; 
+    border-color: #45a049; 
+}
+
+.buscador .custom-select-width {
+    width: 250px;
+}
+
+.buscador .customizeHR
+{
+	color: white;
+	background-color: white;
+	 margin-top: 5px;
+		
+}

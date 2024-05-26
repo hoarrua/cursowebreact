@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +8,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/transportes.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header class="mb-2">
         <div class="container">
-           <i class="bi bi-telephone custom-bg"> +54 2901 480294</i>
-		   <i class="bi bi-envelope custom-bg"> negociosInmobiliarios@gmail.com</i>
-
+            <i class="bi bi-telephone custom-bg"> +54 2901 480294</i>
+            <i class="bi bi-envelope custom-bg"> negociosInmobiliarios@gmail.com</i>
         </div>
     </header>
 
@@ -38,12 +38,12 @@
                         <a class="nav-link active" href="ventas.html">Ventas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Alquileres</a>
+                        <a class="nav-link" href="alquileres.html">Alquileres</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Servicios</a>
                     </li>
-					  <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                 </ul>
@@ -52,76 +52,126 @@
     </nav>
 
     <main class="container">
-    
-		<div>
-			<img src="img/home/propiedades.jpg" width="30%" >
-		</div>
-        
-		<br>
-		<div class="propiedades">
-				<div class="propiedad">
-					<img src="img/ventas/edifi.jpeg" width="30%" >
-					<div class="info">
-							<h5>Alameda de la Federacion 188</h5>	
-							<h6>Oficinas</h6>													
-					</div>
-						
-				</div>	
-					
-				<div class="propiedad">
-					<img src="img/ventas/edifi1.jpeg" width="30%">
-					<div class="info">
-						<h5>Maipu 670</h5>	
-						<h6>Depto 3 dormitorios</h6>								
-					</div>							
-				</div>
-				
-				<div class="propiedad">
-					<img src="img/ventas/edifi2.jpg" width="50" >
-					<div class="info">
-							<h5>Lotes Puerto Urquiza</h5>	
-							<h6>Terrenos de 10x30</h6>													
-					</div>
-						
-				</div>	
-				
-				
-				<div class="propiedad">
-					<img src="img/ventas/edifi3.jpg" width="50" >
-					<div class="info">
-							<h5>Alameda de la Federacion 188</h5>	
-							<h6>Oficinas</h6>													
-					</div>
-						
-				</div>	
-					
-				<div class="propiedad">
-					<img src="img/ventas/edifi4.jpg" width="50">
-					<div class="info">
-						<h5>Maipu 670</h5>	
-						<h6>Depto 3 dormitorios</h6>								
-					</div>							
-				</div>
-				
-				<div class="propiedad">
-					<img src="img/ventas/depto8.jpg" width="50" >
-					<div class="info">
-							<h5>Lotes Puerto Urquiza</h5>	
-							<h6>Terrenos de 10x30</h6>													
-					</div>
-						
-				</div>
+        <div>
+            <img src="img/home/propiedades.jpg" width="30%">
+        </div>
 
-								
-		</div>
-		
-		
-		
+        <br>
+        
+
+        <div class="propiedades">
+			<div class="buscador">
+					<div class="row">
+						<div class="col">
+							<h2>Buscador de Propiedades</h2>
+						</div>
+					</div>
+					<hr class="customizeHR">
+					<!-- Buscador de propiedades -->
+					<form>
+						<div class="row">
+							<div class="col">
+								<label>TIPO</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<select class="form-control custom-select-width" id="tipoPropiedad">
+									<option value="departamento">Departamento</option>
+									<option value="casa">Casa</option>
+									<option value="terreno">Terreno</option>
+								</select>
+							</div>
+						</div>
+						<br>
+						
+						<div class="row">
+							<div class="col">
+								<label>DORMITORIOS</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checkbox1">
+									<label class="form-check-label" for="checkbox1">1</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checkbox2">
+									<label class="form-check-label" for="checkbox2">2</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checkbox3">
+									<label class="form-check-label" for="checkbox3">3</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checkbox4">
+									<label class="form-check-label" for="checkbox4">4</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checkbox4">
+									<label class="form-check-label" for="checkbox4">O Mas</label>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="row mb-3">
+							<div class="col">
+								<button type="submit" class="btn btn-custom">Buscar</button>
+							</div>
+						</div>
+					</form>
+			</div>
+			
+			
+            <div class="propiedad">
+                <img src="img/ventas/edifi.jpeg" width="100%">
+                <div class="info">
+                    <h5>Belgrano 188</h5>    
+                    <h6>Depto 4 dormitorios</h6>                                                    
+                </div>
+            </div>    
+            <div class="propiedad">
+                <img src="img/ventas/edifi1.jpeg" width="50%">
+                <div class="info">
+                    <h5>Maipu 670</h5>    
+                    <h6>Depto 3 dormitorios</h6>                                
+                </div>                            
+            </div>
+            <div class="propiedad">
+                <img src="img/ventas/edifi2.jpg" width="50">
+                <div class="info">
+                    <h5>Puerto Urquiza</h5>    
+                    <h6>Depto 2 dormitorios</h6>                                                    
+                </div>
+            </div>    
+            <div class="propiedad">
+                <img src="img/ventas/edifi3.jpg" width="50">
+                <div class="info">
+                    <h5>Alameda de la Federacion 188</h5>    
+                    <h6>Piso 3 completo</h6>                                                    
+                </div>
+            </div>    
+            <div class="propiedad">
+                <img src="img/ventas/edifi4.jpg" width="50">
+                <div class="info">
+                    <h5>Maipu 670</h5>    
+                    <h6>Depto 3 dormitorios</h6>                                
+                </div>                            
+            </div>
+            <div class="propiedad">
+                <img src="img/ventas/edifi5.jpg" width="50">
+                <div class="info">
+                    <h5>Saravia 640</h5>    
+                    <h6>Depto 3 dormitorios</h6>                                                    
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="text-center mt-4">
         <p>Diseñado por Hugo Arrua - &copy; año</p>
     </footer>
-
 </body>
 </html>

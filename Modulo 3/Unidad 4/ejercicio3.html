@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  
+</head>
+<body>
+    <h1>Alumnos Aprobados</h1>
+    <div class="counter">
+        Cantidad: <span id="aprobados">0</span>
+    </div>
+
+    <script>
+			var alumnos = [
+				  {
+
+					nombre: 'Juan Gomez',
+
+					nota: 7
+
+				  }, {
+
+					nombre: 'Pedro Rodriguez',
+
+					nota: 4
+
+				  }, {
+
+					nombre: 'Roxana García',
+
+					nota: 8
+
+				  }, {
+
+					nombre: 'Luciano Lopez',
+
+					nota: 5
+
+				  }, {
+
+					nombre: 'Fernanda Gimenez',
+
+					nota: 6
+
+				  }, {
+
+					nombre: 'Florencia Martinez',
+
+					nota: 10
+
+				  }, {
+
+					nombre: 'Raul Sanchez',
+
+					nota: 7
+
+				  }, {
+
+					nombre: 'Sandra Figueroa',
+
+					nota: 8
+
+				  }
+
+				];
+				
+			
+			var aprobados = alumnos.filter(aux => aux.nota >= 7);
+			
+			var spanAprobados = document.getElementById("aprobados");
+			 
+			spanAprobados.textContent = aprobados.length;
+			
+			  // Mostrar los nombres de los alumnos aprobados
+			aprobados.forEach(alumno => {
+				spanAprobados.insertAdjacentHTML('beforeend', '<br>' + alumno.nombre);
+			});
+				
+				
+				
+	</script>
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+  
+</head>
+<body>
+    <h1>Contador de Caracteres</h1>
+    <textarea id="textarea" rows="10" cols="50" placeholder="Escribe algo..."></textarea>
+    <div class="counter">
+        Caracteres: <span id="count">0</span>
+    </div>
+
+    <script>
+	
+			document.addEventListener('DOMContentLoaded', (event) => {
+				const textarea = document.getElementById('textarea');
+				const count = document.getElementById('count');
+
+				textarea.addEventListener('input', () => {
+					count.textContent = textarea.value.length;
+				});
+			});
+	</script>
+</body>
+</html>
+
+

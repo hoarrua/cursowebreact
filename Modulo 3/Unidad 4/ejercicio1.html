@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+			
+			
+			
+			
+			
+			
+			
+			 .container {
+				display: flex;
+				border: 2px solid black;
+		
+				align-items: center;
+			}
+
+			.column1 {  
+				background-color: #ff1a00;		
+			}
+			
+			.column1.activo {
+				background: white;
+			}
+			
+			
+			.column2 { 
+				 background-color: #412CB4;
+			}
+			
+			.column2.activo {
+				background: #E9EC26;
+			}
+			
+			.column3 { 
+				background-color: #399767;
+			}
+			
+			.column3.activo {
+				background: #26ECE0;
+			}
+			
+			
+			.column1, .column2, .column3{
+					height: 200px;
+					width: 34%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+			}
+			
+			p
+			  {
+					color: #3D3633;
+					text-align: center;
+			  }
+      
+	</style>
+	
+</head>
+<body>
+    <h3>Alternar clases de CSS</h3>
+	<div class="container">
+			<div class="column1"><p>1</p></div>
+			<div class="column2"><p>2</p></div>
+			<div class="column3"><p>3</p></div>
+	</div>
+   
+    <script>
+ 		 // CSS
+        const column1 = document.getElementsByClassName('column1')[0];          
+         
+        /**
+         * classList representa la lista de clases asignadas a un elemento
+         * toggle nos permite "prender" o "apagar" una clase en un objeto
+         * add agrega la clase o clases que le pasemos
+         * remove remueve la clase o clases que le pasemos
+         */
+        column1.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo');
+        });
+		
+		 // CSS
+        const column2 = document.getElementsByClassName('column2')[0];          
+         
+        /**
+         * classList representa la lista de clases asignadas a un elemento
+         * toggle nos permite "prender" o "apagar" una clase en un objeto
+         * add agrega la clase o clases que le pasemos
+         * remove remueve la clase o clases que le pasemos
+         */
+        column2.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo');
+        });
+		
+		 // CSS
+        const column3 = document.getElementsByClassName('column3')[0];          
+         
+        /**
+         * classList representa la lista de clases asignadas a un elemento
+         * toggle nos permite "prender" o "apagar" una clase en un objeto
+         * add agrega la clase o clases que le pasemos
+         * remove remueve la clase o clases que le pasemos
+         */
+        column3.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo');
+        });
+   	
+   	
+    </script>
+</body>
+</html>
+
+
+

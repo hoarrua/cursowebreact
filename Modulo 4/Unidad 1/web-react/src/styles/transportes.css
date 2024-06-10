@@ -1,0 +1,303 @@
+body {
+		font-family:'Open Sans', sans-serif;
+		font-size: 16px;
+		line-height: 20px;	
+     }
+	 
+header{
+		background-color: #2e64a1;
+		padding: 5px 0;
+}	 
+
+header h1{
+		color: white;
+		font-size: 40px;
+		font-weight: 100;
+		font-style: italic;
+		display: inline-block;
+		position: relative;
+		bottom: 35px;
+		margin-left: 10px;			
+}
+
+
+
+
+nav {
+    background-color: #EA7F57;
+    margin-bottom: 0px;
+    height: 70px; 
+	align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%; 
+}
+
+nav ul li {
+    flex-grow: 1;
+	align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+	padding: 5px 5px; 
+    display: block;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 700;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	 box-sizing: border-box; 
+}
+
+nav ul li a.activo {
+    background-color: #DA610C;
+    padding: 5px 5px;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+}
+
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.3);
+	padding: 5px 5px; 
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+
+
+
+footer{
+	background-color: #ccc;
+	clear: both;
+	color: #333;
+	text-align: center;
+	padding: 5px 0;
+	margin-top: 20px;	
+}
+
+.holder{
+		max-width: 960px;
+		margin: 0 auto;
+}
+
+h2{
+	color: #2e64a1;
+	font-weight: 400;	
+}
+
+.bienvenidos{
+		width: 75%;
+		padding-right: 10px;
+		box-sizing: border-box;
+}
+
+.testimonios{
+		width: 25%;	
+}
+
+.columnas{
+		display: flex;
+		justify-content: space-between;
+}
+
+.bienvenidos p{
+	font-size: 16px;
+}
+
+.testimonio{
+	background-color: #ccc;
+	padding: 16px;	
+}
+
+.testimonio .cita{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 22px;
+	display: block;	
+}
+
+.testimonio .autor{
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	margin: 12px 0;
+}
+
+
+
+.historia p{
+	font-size: 14px;
+}
+
+
+.personas {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.persona {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+}
+
+.persona img {
+    width: 100px; 
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.info h5, .info h6, .info p {
+    margin: 5px 0; 
+}
+
+
+
+
+
+
+.propiedades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 2px; /* Espacio entre las columnas */
+}
+
+.propiedad {
+    background-color: #f9f9f9;
+    padding: 5px;
+     flex: 1;
+    border-radius: 5px; 
+    text-align: center; 
+	padding: 2px;
+}
+
+.propiedad img {
+    width: 60%; 
+    height: auto; 
+	border: 1px solid #ddd;
+	padding: 0.3em;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	margin-right: 2%;
+}
+
+.propiedad h5 {
+	color: #DA380C; 
+	
+}
+
+
+
+.custom-bg {
+		   font-family:'Open Sans', sans-serif;
+			font-size: 12px;
+            padding: 10px;
+            color: white;
+        }
+
+
+.buscador {
+    background-color: #2e64a1; 
+    padding: 10px;
+    border-radius: 5px;  
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-size: 12px;
+	height: 310px;
+	width: 320px;
+
+	
+}
+
+
+
+
+.buscador h2{
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center; 
+	
+}
+
+
+label {
+	color: white;
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0!important;
+}
+
+
+.buscador .row {
+        margin-bottom: 5px;
+		margin-left: 5px;
+	
+    }
+
+
+
+.buscador .col {
+       padding-left:5px;
+	
+    }
+
+
+	
+	
+.buscador .form-check-inline {
+	margin-right: 10px;
+}
+
+.form-check-label .mr-2{
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+
+.buscador .btn-custom {
+    background-color: #4CAF50; 
+    border-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px; 
+    font-size: 16px; 
+	width: 250px; 
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+.buscador .btn-custom:hover {
+    background-color: #45a049; 
+    border-color: #45a049; 
+}
+
+.buscador .custom-select-width {
+    width: 250px;
+}
+
+.buscador .customizeHR
+{
+	color: white;
+	background-color: white;
+	 margin-top: 5px;
+		
+}

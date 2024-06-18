@@ -17,3 +17,11 @@ S
 #Modulo 4/Unidad 1/archivoPrueba.txt,d\2\d29337196b5cc4a7de0cff3096cd6d8ca3e0dea7
 V
 &Modulo 4/Unidad 1/web-react/.gitignore,6\2\629fb6cecb303f7b22c6616606ada8191d54b019
+Å
+Q.idea/sonarlint/securityhotspotstore/7/d/7d90a0ac910f9ff1266787e12352b17a8b57f8c6,6\2\6281dec88eb013cd7d6e68218f8fad8c649c5754
+w
+G.idea/sonarlint/issuestore/7/d/7d90a0ac910f9ff1266787e12352b17a8b57f8c6,d\7\d73532d3601fd45c6f1c433d671cccbc5e9ae1fb
+Å
+Q.idea/sonarlint/securityhotspotstore/6/2/629fb6cecb303f7b22c6616606ada8191d54b019,9\9\99e923cd1012927c106e91e83febc6b849746723
+w
+G.idea/sonarlint/issuestore/6/2/629fb6cecb303f7b22c6616606ada8191d54b019,3\a\3ac3334aa05363097f7f5b778617b0d17387c0ec

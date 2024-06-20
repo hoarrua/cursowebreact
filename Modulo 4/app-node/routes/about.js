@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  /**res.render('index', { title: 'Express' });**/
-  res.send('¡Bienvenido a mi aplicación Express!');
+  res.send('Acerca de nosotros: Somos una empresa dedicada a...');
 });
 
 module.exports = router;

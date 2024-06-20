@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Modulo 4/web-react" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Modulo React/web-react" vcs="Git" />
   </component>
 </project>

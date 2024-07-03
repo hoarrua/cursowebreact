@@ -3,16 +3,6 @@
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-Å
-Q.idea/sonarlint/securityhotspotstore/7/d/7d90a0ac910f9ff1266787e12352b17a8b57f8c6,6\2\6281dec88eb013cd7d6e68218f8fad8c649c5754
-w
-G.idea/sonarlint/issuestore/7/d/7d90a0ac910f9ff1266787e12352b17a8b57f8c6,d\7\d73532d3601fd45c6f1c433d671cccbc5e9ae1fb
-Å
-Q.idea/sonarlint/securityhotspotstore/6/2/629fb6cecb303f7b22c6616606ada8191d54b019,9\9\99e923cd1012927c106e91e83febc6b849746723
-w
-G.idea/sonarlint/issuestore/6/2/629fb6cecb303f7b22c6616606ada8191d54b019,3\a\3ac3334aa05363097f7f5b778617b0d17387c0ec
-M
-Modulo 4/web-react/.gitignore,0\0\0066f36c94fde97ca2220a4a3cdccd99a7b82b81
 W
 'Modulo 4/app-react/public/manifest.json,9\6\96c7ecaea05ca15c126f0862603cc77bbda17693
 T
@@ -65,3 +55,27 @@ _
 ,Modulo 4/app-react/src/pages/ContactoPage.js,1\6\161f36d1d84032fd29efc27aca94e30ff362d175
 b
 2Modulo 4/app-react/src/components/layout/Footer.js,f\2\f2f79deb3660ca112175373bd55b3a8eea137b72
+Q
+!Modulo 4/app-node/views/error.hbs,7\8\786e3bc99d0c0f7d50705fe27641958dea719a92
+I
+Modulo 4/app-node/bin/www,8\5\854c23af6b5c3e5387fc38bfdf90ba76100d2d12
+^
+.Modulo 4/app-node/public/stylesheets/style.css,3\9\39b52f3e5a72c50eadeb77723d3092fb8e44f2b9
+R
+"Modulo 4/app-node/views/layout.hbs,7\3\73200496ebf84a04040570a2aaba12d2d20cbd2f
+Q
+!Modulo 4/app-node/views/index.hbs,6\1\617536be0d946505d50d4e6677ce561d18dbf442
+H
+Modulo 4/app-node/app.js,d\8\d877f72eff6ea8ba9c948d3166918d467334b793
+Q
+!Modulo 4/app-node/routes/index.js,6\4\6423232707a3eb6598458b25f7d769fe285dba07
+N
+Modulo 4/app-node/package.json,9\2\925ee5a92449c565ea1fd1ba528675113c30be2c
+S
+#Modulo 4/app-node/package-lock.json,b\4\b4627a0d40a3869bf69f91b32e92ae5c860a0d08
+Q
+!Modulo 4/app-node/routes/about.js,c\7\c76d20f25e0fc482123cb068ced8f242de400845
+T
+$Modulo 4/app-node/routes/contacto.js,3\8\38f22f9b8181d2d6272a5f6e661543b946058b0e
+T
+$Modulo 4/app-node/routes/usuarios.js,e\e\eec1ebd7c60dfa2f6954e51eec0fdedb57259b68

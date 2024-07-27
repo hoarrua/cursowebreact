@@ -1,0 +1,55 @@
+para ejecutar el archivo indexjs
+
+--en la carpeta desde la linea de comando ejecutar
+node index.js
+
+
+
+--PARA INICIALIZAR UN PROYECTO EJECUTAR
+npm init
+
+--INSTALAR LIBRERIA MOMENT
+npm install moment --save
+
+
+
+--INSTALAR EXPRESS EL MANEJADOR WEB DE NODE
+npm i --global express-generator
+
+--GENERA LA PLANTILLA BASICA 
+npx express-generator --view=hbs
+
+
+--INSTALAMOS NODEMON QUE ES EL ENCARGADO DE REINICIAR EL SERVIDOR DE DESARROLLO
+npm i nodemon
+
+
+--POR ULTIMO EJECUTAMOS PARA INSTALAR TODOS LAS DEPENDENCIAS
+npm i
+
+---modificamos en el archivo package.json
+--en "start": "nodemon ./bin/www"
+
+
+
+--instalo mysql
+npm i mysql
+
+
+
+---instalamos dependencia utiles
+npm i util
+
+
+
+
+--- instalar dotenv. Sirve para establecer las conexiones a la base de datos
+npm i dotenv
+
+
+--instalo el modulo crypter
+npm install mysql crypto
+
+
+--PARA EJECUTAR UN PROYECTO NPM
+npm start

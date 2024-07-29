@@ -1,7 +1,25 @@
-
-
+// app.js
 const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const adminRoutes = require('./routes/admin');
 
+app.set('view engine', 'hbs');
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/admin', adminRoutes);
+
+
+
+module.exports = app;
+
+
+
+
+
+
+
+/** 
 var pool = require('./bd');
 const crypto = require('crypto');
 
@@ -16,12 +34,11 @@ pool.query('select * from usuarios', (err,rows) => {
     console.log(`${row.id} - ${row.nombre} - ${row.correo}`); 
   });
 
-
 });
 
 
 function insertarUsuario(nombre, email, rol, user, pass, activo) {
-  // Encriptar la contraseña usando MD5
+
   const hashedPassword = crypto.createHash('md5').update(pass).digest('hex');
 
   const query = 'INSERT INTO usuarios (nombre, email, rol, user, pass, activo) VALUES (?, ?, ?, ?, ?, ?)';
@@ -36,14 +53,6 @@ function insertarUsuario(nombre, email, rol, user, pass, activo) {
   });
 }
 
-
-
-
-// Ejemplo de uso
 insertarUsuario('Hugo Arrua', 'hoarrua@example.com', 'administrador', 'admin', 'a1', 1);
 
-var app = express();
-
-
-
-module.exports = app;
+*/

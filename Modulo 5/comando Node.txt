@@ -51,5 +51,9 @@ npm i dotenv
 npm install mysql crypto
 
 
+npm install --save express-handlebars
+
+
+
 --PARA EJECUTAR UN PROYECTO NPM
 npm start

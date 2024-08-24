@@ -1,0 +1,258 @@
+ <div class="container" >
+    <h1 class="bg-primary text-white p-2">Registrar Propiedad</h1>
+
+   <div class="card">
+        <div class="card-body">
+                  <form id="buscarClienteForm" >
+                     <label for="cuit_input" class="label-bold">CUIT</label>
+                     <input type="text" id="cuit_input" name="cuit">
+                     <label for="id" class="label-bold">ID</label>
+                     <input type="text" id="id" name="id">
+                     <button type="submit" class="btn btn-success">Buscar Cliente</button>
+                  </form>
+                  
+                  <div id="clienteDatos">
+                     <h3 class="h4 text-gray-900 mb-2">Datos del Cliente</h3>
+                     <p>Apellido: <span id="apellido" class="label-bold"></span></p>
+                     <p>Nombre: <span id="nombre" class="label-bold"></span></p>
+                     <p>CUIT: <span id="cuit" class="label-bold"></span></p>
+                  </div>  
+                <form action="/admin/propiedades/guardar" method="POST" enctype="multipart/form-data">
+                     
+                     <input type="hidden" name="cliente_id" id="cliente_id" >
+                     <div class="form-group"> 
+                        <label for="titulo" class="label-bold">Título</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control" >
+                     </div>
+
+                     <div class="form-group"> 
+                              <label for="tipo" class="label-bold">Tipo</label>
+                              <select id="tipo" name="tipo" class="form-control" >
+                                 <option value="lote">Lote</option>
+                                 <option value="terreno">Terreno</option>
+                                 <option value="casa">Casa</option>
+                                 <option value="departamento">Departamento</option>
+                              </select>
+                     </div>
+
+                     <div class="form-group"> 
+                           <label for="precio" class="label-bold">Precio</label>
+                           <input type="number" id="precio" name="precio" step="0.01" class="form-control" >
+                     </div>
+
+                     <div class="form-group"> 
+                           <label for="dimensiones" class="label-bold">Dimensiones</label>
+                           <input type="text" id="dimensiones" name="dimensiones" class="form-control">
+                     </div>
+
+                     <div class="form-group"> 
+                           <label for="descripcion" class="label-bold">Descripción</label>
+                           <textarea id="descripcion" name="descripcion" class="form-control"></textarea>
+                     </div>
+
+                     <div class="form-group"> 
+                              <label for="tipo_asociacion" class="label-bold">Tipo de Asociación</label>
+                              <select id="tipo_asociacion" name="tipo_asociacion" class="form-control">
+                                 <option value="venta">Venta</option>
+                                 <option value="alquiler">Alquiler</option>
+                              </select>
+                     </div>
+
+                     <div class="form-group"> 
+                        <label for="imagenes" class="label-bold">Subir Imágenes:</label>
+                        <input type="file" id="imagenes" name="imagenes[]" class="btn">
+                        <button type="button" id="mostrarImagenes" class="btn btn-secondary">Cargar Imagen</button>
+                     </div>
+
+                     <h3>Imágenes Subidas:</h3>
+                     <div id="imagenesSubidas" class="imagenes-subidas">
+                        
+                        <!-- Aquí se mostrarán las imágenes subidas -->
+                     </div>
+
+                     
+                     
+
+                     <button type="submit" class="btn btn-primary">Guardar Propiedad</button>
+                  </form>
+
+                  
+               </div>   
+         </div>      
+
+         <div class="card shadow mb-4">
+               <div class="card-header py-3">
+                     <h6 class="m-0 font-weight-bold text-primary">Propiedades Registradas</h6>
+               </div>
+               
+               <div class="card-body">
+               <div class="table-responsive">
+                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                              <tr>
+                                 <th>Name</th>
+                                 <th>Position</th>
+                                 <th>Office</th>
+                                 <th>Age</th>
+                                 <th>Start date</th>
+                                 <th>Salary</th>
+                              </tr>
+                        </thead>
+                        <tfoot>
+                              <tr>
+                                 <th>Name</th>
+                                 <th>Position</th>
+                                 <th>Office</th>
+                                 <th>Age</th>
+                                 <th>Start date</th>
+                                 <th>Salary</th>
+                              </tr>
+                        </tfoot>
+                        <tbody>
+                              <tr>
+                                 <td>Tiger Nixon</td>
+                                 <td>System Architect</td>
+                                 <td>Edinburgh</td>
+                                 <td>61</td>
+                                 <td>2011/04/25</td>
+                                 <td>$320,800</td>
+                              </tr>
+                              <tr>
+                                 <td>Garrett Winters</td>
+                                 <td>Accountant</td>
+                                 <td>Tokyo</td>
+                                 <td>63</td>
+                                 <td>2011/07/25</td>
+                                 <td>$170,750</td>
+                              </tr>
+                           
+                              
+                        </tbody>
+                     </table>
+                  </div>
+            </div>
+         
+         </div>
+
+      
+      
+</div>      
+ <script>
+            
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.sidebar-link');
+    const content = document.getElementById('content');
+
+    if (links && content) {
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const url = this.href;
+
+                fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const newContent = doc.querySelector('#content').innerHTML;
+                        content.innerHTML = newContent;
+                        history.pushState(null, '', url);
+                    })
+                    .catch(error => console.error('Error al cargar la página:', error));
+            });
+        });
+    }
+
+    // Método de búsqueda de clientes
+    const buscarClienteForm = document.getElementById('buscarClienteForm');
+    if (buscarClienteForm) {
+        buscarClienteForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            console.log('Script cargado correctamente');
+
+            const cuit = document.getElementById('cuit_input').value;
+            const id = document.getElementById('id').value;
+
+            try {
+                const response = await fetch('/admin/buscar-cliente', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cuit, id })
+                });
+
+                console.log("Response status:", response.status);
+
+                if (response.ok) {
+                    const cliente = await response.json();
+                    console.log("Cliente recibido del servidor:", cliente);
+
+                    if (cliente.apellido && cliente.nombre && cliente.cuit) {
+                        document.getElementById('apellido').textContent = cliente.apellido;
+                        document.getElementById('nombre').textContent = cliente.nombre;
+                        document.getElementById('cuit').textContent = cliente.cuit;
+                        document.getElementById('cliente_id').value = cliente.id;
+                        console.log("cliente.id: ", cliente.id);
+                    } else {
+                        console.error("Datos de cliente incompletos:", cliente);
+                    }
+                } else {
+                    const error = await response.json();
+                    alert(error.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al buscar el cliente');
+            }
+        });
+    } 
+
+    // Manejo de imágenes subidas
+   const mostrarImagenesBtn = document.getElementById('mostrarImagenes');
+    if (mostrarImagenesBtn) {
+        mostrarImagenesBtn.addEventListener('click', function() {
+            const input = document.getElementById('imagenes');
+            const imagenesSubidas = document.getElementById('imagenesSubidas');
+
+            if (input.files && input.files.length > 0) {
+                for (const file of input.files) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(event) {
+                        const imgContainer = document.createElement('div');
+                        imgContainer.classList.add('img-container'); // Clase para personalizar el contenedor de la imagen
+
+                        const img = document.createElement('img');
+                        img.src = event.target.result;
+                        img.classList.add('img-thumbnail');
+                        
+                        imgContainer.appendChild(img);
+                        imagenesSubidas.appendChild(imgContainer); // Añadir el contenedor con la imagen
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            } else {
+                alert("No se seleccionaron imágenes.");
+            }
+        });
+    }
+
+    // Manejo del formulario de guardar propiedad
+    const guardarPropiedadForm = document.querySelector('form[action="/admin/propiedades/guardar"]');
+    if (guardarPropiedadForm) {
+        guardarPropiedadForm.addEventListener('submit', function() {
+            console.log("Valor de cliente_id en el formulario de guardar: ", document.getElementById('cliente_id').value);
+        });
+    }
+});
+
+
+
+            
+
+
+
+</script>
+
+
+

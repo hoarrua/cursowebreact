@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="bg-primary text-white p-2">Modificar Cliente</h1>
+    <div class="card">
+        <div class="card-body">
+            <form action="/admin/cliente/modificar/{{cliente.id}}" method="post">
+                <div class="form-group">
+                    <label class="label-bold">CUIT</label>
+                    <input type="text" class="form-control" id="cuit" name="cuit" value="{{cliente.cuit}}" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" value="{{cliente.apellido}}" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{cliente.nombre}}" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="{{cliente.fechaNac}}" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Sexo</label>
+                  <select class="form-control" id="sexo" name="sexo" required>
+                        <option value="Masculino" {{#if (eq cliente.sexo "Masculino")}}selected{{/if}}>Masculino</option>
+                        <option value="Femenino" {{#if (eq cliente.sexo "Femenino")}}selected{{/if}}>Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{cliente.email}}" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Código de Área Celular</label>
+                    <input type="text" class="form-control" id="codAreaCel" name="codAreaCel" value="{{cliente.codAreaCel}}">
+                </div>
+                <div class="form-group">
+                    <label class="label-bold">Número de Celular</label>
+                    <input type="text" class="form-control" id="numCel" name="numCel" value="{{cliente.numCel}}">
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar Cliente</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<!-- Contenido de la Página -->
+  <head>
+    <!-- Otros enlaces y scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+  
+  <div class="container" >
+    <h1 class="bg-primary text-white p-2">Alta Clientes</h1>
+    <!-- Formulario de alta de cliente -->
+    <div class="card">
+        <div class="card-body">
+                  <form action="/admin/cliente/alta" method="post">
+                          <div class="form-group">                            
+                            <label class="label-bold">CUIT</label>
+                            <input type="text" class="form-control" id="cuit" name="cuit" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Sexo</label>
+                             <select class="form-control" id="sexo" name="sexo" required>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Código de Área Celular</label>
+                            <input type="text" class="form-control" id="codAreaCel" name="codAreaCel">
+                          </div>
+                          <div class="form-group">
+                            <label class="label-bold">Número de Celular</label>
+                            <input type="text" class="form-control" id="numCel" name="numCel">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+                        </form>
+         </div>
+    </div>      
+    
+
+
+  <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Clientes Registradas</h6>
+            </div>
+            
+            <div class="card-body">
+            <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                     <thead>
+                           <tr>
+                                <th class="text-gray-900">ID</th>
+                                <th class="text-gray-900">CUIT</th>
+                                <th class="text-gray-900">Apellido</th>
+                                <th class="text-gray-900">Nombre</th>
+                                <th class="text-gray-900">Fecha Nacimiento</th>
+                                <th class="text-gray-900">Sexo</th>
+                                <th class="text-gray-900">Email</th>
+                                <th class="text-gray-900">Teléfono</th>
+                                <th class="text-gray-900">Fecha Alta</th>
+                                <th class="text-gray-900">Acciones</th>
+                           </tr>
+                     </thead>
+                    
+                     <tbody>
+                           {{#each clientes}}
+                                <tr>
+                                    <td >{{this.id}}</td>
+                                    <td >{{this.cuit}}</td>
+                                    <td >{{this.apellido}}</td>
+                                    <td >{{this.nombre}}</td>
+                                    <td >{{this.fechaNac}}</td>
+                                    <td >{{this.sexo}}</td>
+                                    <td  >{{this.email}}</td>
+                                    <td >{{this.codAreaCel}} {{this.numCel}}</td>
+                                    <td >{{this.fechaAlta}}</td>
+                                    <td >
+                                        <a href="/admin/cliente/modificar/{{this.id}}" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        
+                                      
+                                        <a href="#" class="btn btn-sm btn-danger" onclick="confirmDelete('{{this.id}}')">
+                                              <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                        {{/each}}
+                           
+                     </tbody>
+                  </table>
+               </div>
+         </div>
+      
+  </div>
+
+
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "No podrás revertir esta acción",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirigir a la ruta de eliminación
+                window.location.href = `/admin/cliente/eliminar/${id}`;
+            }
+        })
+    }
+</script>
